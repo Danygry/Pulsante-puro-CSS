@@ -1,0 +1,66 @@
+body {                        /* STILE PAGINA */
+background-color: #232323;
+justify-content: center;
+align-items: center;
+display: flex;
+flex-direction: column;
+height: 350px;
+}
+
+#checkbox {
+display: none;
+}
+
+.switch {                /* STILE PULSANTE */
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(99, 99, 99);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: rgb(37, 37, 37);
+  border: 2px solid rgb(126, 126, 126);
+  box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+}
+           /* STILE ICONA */
+.svg {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg path {
+  fill: rgb(37, 37, 37);
+}
+                                    /* EFFETTO DOPO IL CLICK */
+#checkbox:checked + .switch .svg {
+  filter: drop-shadow(0px 0px 3px rgb(156, 211, 243));
+}
+
+#checkbox:checked + .switch .svg path {
+  fill: rgb(156, 211, 243);
+}
+
+#checkbox:checked + .switch {
+  box-shadow: 0px 0px 1px rgb(156, 211, 243) inset,
+      0px 0px 2px rgb(156, 211, 243) inset,
+      0px 0px 10px rgb(156, 211, 243) inset,
+      0px 0px 40px rgb(156, 211, 243),
+      0px 0px 100px rgb(156, 211, 243),
+      0px 0px 5px rgb(156, 211, 243);
+  border: 2px solid rgb(156, 211, 243);
+  color: rgb(156, 211, 243);
+}
+  
